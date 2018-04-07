@@ -1,23 +1,18 @@
-.navBar {
-  overflow: hidden;
-  background-color: #333;
+.nav-tabs {
+  padding: 15px;
+  background-color:#FEFEFE;
 }
 
-.navBar a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.nav-tabs > li > a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#3B1C32;
+  font-size: 20px;
+  border: medium none;
 }
 
-.navBar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.navBar a.active {
-  background-color: #4CAF50;
-  color: white;
+.nav-tabs > li > a:hover {
+  background-color: #ddd !important;
+  border: medium none;
+  border-radius: 0;
+  color:#333;
 }

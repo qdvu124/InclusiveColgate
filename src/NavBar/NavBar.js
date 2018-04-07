@@ -3,11 +3,11 @@ import './styles/NavBar.css'
 
 function NavBar() {
     return (
-        <div className="navBar">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+        <div>
+            <ul className="nav nav-tabs">
+                <li className="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#about">About</a></li>
+            </ul>
         </div>
     )
 }
