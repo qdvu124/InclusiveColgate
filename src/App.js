@@ -1,11 +1,18 @@
 import React from 'react';
-import NavBar from './NavBar/NavBar.js'
 
-function App() {
+import NavBar from './NavBar/NavBar.js'
+import Stories from './Stories/Stories.js'
+import {MuiThemeProvider} from 'material-ui/styles';
+
+const App = () => {
   return (
-    <div className="container">
+    <MuiThemeProvider>
       <NavBar/>
-    </div>
+      <br/>
+      <div className="container">
+        <Stories/>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
