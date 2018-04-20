@@ -1,0 +1,21 @@
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin: 25px;
+  padding: 25px;
+  background-color: gray;
+  background-image: url('../Colgate.jpg');
+  background-size: cover
+}
+
+.inclusive-text {
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-size: 50px;
+}
+
+.stories {
+  padding: 25px;
+}

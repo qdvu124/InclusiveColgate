@@ -1,7 +1,6 @@
 import React from 'react'
 
 import AppBar from 'material-ui/AppBar'
-import MenuItem from 'material-ui/MenuItem'
 import Drawer from 'material-ui/Drawer'
 import { FlatButton, IconButton } from 'material-ui';
 
@@ -10,7 +9,7 @@ class NavBar extends React.Component {
         super(props)
 
         this.state = {
-            open: false
+            drawerOpen: false
         }
         
         this.handleToggle = this.handleToggle.bind(this)
@@ -18,7 +17,7 @@ class NavBar extends React.Component {
 
     handleToggle() {
         this.setState({
-        open: !this.state.open
+            drawerOpen: !this.state.drawerOpen
         })
     }
 
@@ -27,13 +26,16 @@ class NavBar extends React.Component {
             <div>
                 <AppBar 
                     iconElementLeft={
-                    <IconButton>
-                        <FlatButton label="Settings" onClick={this.handleToggle}/>
-                    </IconButton>}
+                        <IconButton>
+                            <FlatButton label='About Us' onClick={this.handleToggle}/>
+                        </IconButton>
+                    }
                 />
-                <Drawer variant="persistent" openSecondary={true} open={this.state.open}>
-                    <MenuItem> First menu item </MenuItem>
-                    <MenuItem> Second menu item </MenuItem>
+                <Drawer 
+                    docked={false} 
+                    openSecondary={true}
+                    open={this.state.drawerOpen}
+                    onRequestChange={(drawerOpen) => {this.setState({drawerOpen})}} >
                 </Drawer>
             </div>
         )
