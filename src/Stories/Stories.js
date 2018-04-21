@@ -2,6 +2,8 @@ import React from 'react'
 import Story from './Story.js'
 import Samples from '../Sample.js'
 
+import {GridList} from 'material-ui/GridList'
+
 class Stories extends React.Component {
 
     constructor(props) {
@@ -15,10 +17,10 @@ class Stories extends React.Component {
     render() {
         const story_items = this.state.stories.map((current_story, index) => {
             return (
-                <div>
+                <GridList>
                     <Story key={index} story={current_story} />
                     <br/>
-                </div>
+                </GridList>
             );
         })
 
